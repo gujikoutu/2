@@ -1,1 +1,92 @@
-# 2
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给牧野的动态告白信 🌸</title>
+    <style>
+        /* 核心动画设置 */
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: '楷体', cursive;
+        }
+
+        /* 心跳盒子 - 确保animation属性存在 */
+        .love-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+            text-align: center;
+            /* 关键动画属性（必须保留） */
+            animation: heartbeat 1.5s infinite; /* 控制心跳动画 */
+            transform-origin: center; /* 确保缩放中心点正确 */
+            max-width: 90%;
+        }
+
+        /* 图片动态效果 */
+        .love-photo {
+            width: 220px;
+            border-radius: 15px;
+            margin: 15px auto;
+            border: 3px solid #ff69b4;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+            /* 新增旋转动画 */
+            animation: photoFloat 3s ease-in-out infinite;
+        }
+
+        /* 文字渐显动画 */
+        h1 {
+            color: #ff1493;
+            margin: 1rem 0;
+            font-size: 2.2rem;
+            /* 新增文字动画 */
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        /* 关键帧动画定义 */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes photoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255,20,147,0.5); }
+            50% { text-shadow: 0 0 20px rgba(255,20,147,0.8); }
+        }
+
+        .signature {
+            color: #666;
+            margin-top: 1.5rem;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-box">
+        <img src="muye-photo.jpg" 
+             alt="牧野的照片" 
+             class="love-photo">
+
+        <h1>牧野，你是我永恒的星光！✨</h1>
+        <h1>Muye, You're My Forever Star! 🌟</h1>
+        
+        <p class="signature">
+            —— 古吉的心意永不褪色 💌<br>
+            (๑˘︶˘๑)♡
+        </p>
+    </div>
+</body>
+</html>
